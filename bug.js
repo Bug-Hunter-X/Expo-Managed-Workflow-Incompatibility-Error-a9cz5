@@ -1,0 +1,7 @@
+This error typically occurs when an Expo managed workflow app attempts to use a library or feature that's incompatible with the managed workflow.  Managed workflow projects have certain limitations compared to bare workflow projects. The exact cause can vary greatly; some common reasons include:
+
+* **Using a library that requires native modules:** Expo's managed workflow limits the use of native modules, as it handles the building process differently. Libraries that rely on native code for functionality often won't work.
+* **Attempting to access device features directly:** Managed workflow often restricts direct access to device hardware for security and simplicity reasons. Attempting to access features like Bluetooth or GPS in a way that's not Expo-compatible could lead to this error.
+* **Incompatible dependencies:** A conflicting dependency, either directly in your project or indirectly through another library, can trigger this message.
+* **Incorrect configuration:** If your `app.json` or `expo.json` is misconfigured (e.g., missing required plugins or incorrect settings), it might clash with the managed workflow setup.
+* **Outdated Expo SDK Version:**  Using an outdated Expo SDK can lead to issues that aren't compatible with newer libraries or features.
